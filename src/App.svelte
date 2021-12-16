@@ -1,5 +1,7 @@
 <script>
 import Task from './lib/Task.svelte';
+import AddTask from './lib/AddTask.svelte';
+
 let tasks = [
 	{'content': 'Task 1', 'isCheked': false},
 	{'content': 'Task 2', 'isCheked': false},
@@ -12,12 +14,14 @@ let tasks = [
 	}
 </script>
 
+
 <main>
 	<h1>Todo List</h1>
 	{#each tasks as task , i }
 	<Task content={task.content} bind:isChecked = {task.isChecked} id={i}/>
 	{/each}
 
+	<AddTask on:submit={addTask}/>
 </main>
 
 <style>
