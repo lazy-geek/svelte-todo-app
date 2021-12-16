@@ -5,3 +5,15 @@
     border: none;
     outline: none;
 }
+
+body {
+    height: 100vh;
+    background-color: #eee;
+}
+
+#app {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -19,3 +19,14 @@ let tasks = [
 	{/each}
 
 </main>
+
+<style>
+	main{
+		min-width: 400px;
+		padding: 40px;
+		background-color: white;
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 20px;
+	}
+</style>
