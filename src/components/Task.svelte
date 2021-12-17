@@ -9,7 +9,7 @@
 </script>
 
 <div class="task" on:click={toggle}>
-    <input type="checkbox" name={id} bind:checked={isChecked} />
+    <input type="checkbox" name={id} bind:checked={isChecked} aria-label="done"/>
     <label for={id} class="content">{content}</label>
 </div>
 
