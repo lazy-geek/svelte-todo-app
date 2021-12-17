@@ -1,6 +1,6 @@
 <script>
-	import AddTask from "./lib/AddTask.svelte";
-	import TaskList from "./lib/TaskList.svelte";
+	import AddTask from "./components/AddTask.svelte";
+	import TaskList from "./components/TaskList.svelte";
 
 	let tasks = [
 		{ content: "Task 1", isCheked: false },
