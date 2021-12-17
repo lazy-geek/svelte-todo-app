@@ -1,31 +1,27 @@
 <script>
-import Task from './lib/Task.svelte';
-import AddTask from './lib/AddTask.svelte';
+	import AddTask from "./lib/AddTask.svelte";
+	import TaskList from "./lib/TaskList.svelte";
 
-let tasks = [
-	{'content': 'Task 1', 'isCheked': false},
-	{'content': 'Task 2', 'isCheked': false},
-	{'content': 'Task 3', 'isCheked': false},
-	{'content': 'Task 4', 'isCheked': false}
+	let tasks = [
+		{ content: "Task 1", isCheked: false },
+		{ content: "Task 2", isCheked: false },
+		{ content: "Task 3", isCheked: false },
+		{ content: "Task 4", isCheked: false },
 	];
 
 	function addTask(e) {
-		tasks = [...tasks,{'content':e.detail.text,'isCheked':false}];
+		tasks = [...tasks, { content: e.detail.text, isCheked: false }];
 	}
 </script>
 
-
 <main>
 	<h1>Todo List</h1>
-	{#each tasks as task , i }
-	<Task content={task.content} bind:isChecked = {task.isChecked} id={i}/>
-	{/each}
-
-	<AddTask on:submit={addTask}/>
+	<TaskList {tasks} />
+	<AddTask on:submit={addTask} />
 </main>
 
 <style>
-	main{
+	main {
 		min-width: 400px;
 		padding: 40px;
 		background-color: white;
