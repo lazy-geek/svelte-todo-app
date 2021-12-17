@@ -9,7 +9,7 @@
     }
 </script>
 
-<div class="container">
+<form>
     <input
         type="text"
         name="task"
@@ -18,10 +18,10 @@
         bind:value
     />
     <button type="submit" id="submit" on:click={submit}>Submit</button>
-</div>
+</form>
 
 <style>
-    .container {
+    form {
         display: flex;
     }
     #task {
@@ -35,7 +35,6 @@
     }
     #submit {
         padding: 7px 20px;
-
         margin-left: 5px;
         font-size: 16px;
         font-weight: bold;
