@@ -23,6 +23,6 @@
     div {
         display: flex;
         align-content: flex-start;
-        height: fit-content;
+        height: min-content;
     }
 </style>
