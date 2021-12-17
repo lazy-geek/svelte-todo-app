@@ -16,6 +16,7 @@
 <style>
     .task {
         cursor: pointer;
+        width: 100%;
         padding: 10px;
         border: 1px solid grey;
         border-radius: 4px;
@@ -36,4 +37,6 @@
         text-decoration: line-through;
         color: grey;
     }
+
+    
 </style>

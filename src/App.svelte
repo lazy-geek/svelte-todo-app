@@ -12,11 +12,16 @@
 	function addTask(e) {
 		tasks = [...tasks, { content: e.detail.text, isCheked: false }];
 	}
+	function deleteTask(e){
+		tasks = tasks.filter(({content}) => {
+			return content != tasks[e.detail.id].content;
+		});
+	}
 </script>
 
 <main>
 	<h1>Todo List</h1>
-	<TaskList {tasks} />
+	<TaskList {tasks} on:delete={deleteTask}/>
 	<AddTask on:submit={addTask} />
 </main>
 
