@@ -5,10 +5,10 @@
 </script>
 
 <div class="task-list">
-    {#each tasks as task, i}
+    {#each tasks as task (task.id)}
     <div>
-        <Task content={task.content} isChecked={task.isChecked} id={i} />
-        <Delete id={i} on:delete/>
+        <Task content={task.content} isChecked={task.isChecked} id={task.id} />
+        <Delete id={task.id} on:delete/>
     </div>
     {/each}
 </div>
@@ -21,6 +21,6 @@
     }
     div {
         display: flex;
-        
+
     }
 </style>

@@ -1,20 +1,21 @@
 <script>
 	import AddTask from "./components/AddTask.svelte";
 	import TaskList from "./components/TaskList.svelte";
+	import { v4 as uuidv4 } from 'uuid';
 
 	let tasks = [
-		{ content: "Task 1", isCheked: false },
-		{ content: "Task 2", isCheked: false },
-		{ content: "Task 3", isCheked: false },
-		{ content: "Task 4", isCheked: false },
+		{id: uuidv4(), content: "Task 1", isCheked: false },
+		{id: uuidv4(), content: "Task 2", isCheked: false },
+		{id: uuidv4(), content: "Task 3", isCheked: false },
+		{id: uuidv4(), content: "Task 4", isCheked: false },
 	];
 
 	function addTask(e) {
-		tasks = [...tasks, { content: e.detail.text, isCheked: false }];
+		tasks = [...tasks, {id: uuidv4(), content: e.detail.text, isCheked: false }];
 	}
 	function deleteTask(e){
-		tasks = tasks.filter(({content}) => {
-			return content != tasks[e.detail.id].content;
+		tasks = tasks.filter(({id}) => {
+			return id != e.detail.id;
 		});
 	}
 </script>
