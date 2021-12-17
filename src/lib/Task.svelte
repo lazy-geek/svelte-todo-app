@@ -1,29 +1,38 @@
 <script>
     export let isChecked = false;
-    export let content = '';
+    export let content = "";
     export let id;
+
+    function toggle() {
+        isChecked = !isChecked;
+    }
 </script>
 
-<div class='task'>
-    <input type="checkbox" name={id} id={id} bind:checked={isChecked}>
+<div class="task" on:click={toggle}>
+    <input type="checkbox" name={id} bind:checked={isChecked} />
     <label for={id} class="content">{content}</label>
 </div>
 
 <style>
-    .task{
+    .task {
+        cursor: pointer;
         padding: 10px;
         border: 1px solid grey;
         border-radius: 4px;
-        box-sizing: content-box;
         display: flex;
         align-items: center;
     }
-    .content{
+    .content {
+        cursor: pointer;
+        pointer-events: none;
         display: inline-block;
         margin-left: 4px;
     }
-
-    input[type='checkbox']:checked + .content{
+    input[type="checkbox"] {
+        pointer-events: none;
+        cursor: pointer;
+    }
+    input[type="checkbox"]:checked + .content {
         text-decoration: line-through;
         color: grey;
     }
