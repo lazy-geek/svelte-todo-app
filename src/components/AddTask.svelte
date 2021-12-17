@@ -6,6 +6,7 @@
 
     function submit() {
         dispatch("submit", { text: value });
+        value = "";
     }
 </script>
 
