@@ -15,12 +15,14 @@
 
 <style>
     .task-list {
+        min-height: 200px;
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 20px;
     }
     div {
         display: flex;
-
+        align-content: flex-start;
+        height: fit-content;
     }
 </style>
