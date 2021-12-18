@@ -26,6 +26,7 @@
     .content {
         cursor: pointer;
         pointer-events: none;
+        word-break: break-all;
         display: inline-block;
         margin-left: 4px;
     }

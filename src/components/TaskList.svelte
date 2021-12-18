@@ -6,10 +6,14 @@
 
 <div class="task-list">
     {#each tasks as task (task.id)}
-    <div>
-        <Task content={task.content} isChecked={task.isChecked} id={task.id} />
-        <Delete id={task.id} on:delete/>
-    </div>
+        <div>
+            <Task
+                content={task.content}
+                isChecked={task.isChecked}
+                id={task.id}
+            />
+            <Delete id={task.id} on:delete />
+        </div>
     {/each}
 </div>
 
@@ -24,5 +28,6 @@
         display: flex;
         align-content: flex-start;
         height: min-content;
+        align-items: center;
     }
 </style>

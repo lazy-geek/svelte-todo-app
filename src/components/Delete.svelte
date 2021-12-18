@@ -13,7 +13,7 @@
 
 <style>
     .delete {
-        padding: 0 20px;
+        padding: 10px 20px;
         margin-left: 5px;
         font-size: 16px;
         font-weight: bold;
