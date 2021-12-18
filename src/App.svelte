@@ -10,6 +10,9 @@
 	}
 	
 	function addTask(e) {
+		
+		if(e.detail.text.trim() == "") return;
+
 		tasks = [
 			...tasks,
 			{ id: uuidv4(), content: e.detail.text, isCheked: false },
