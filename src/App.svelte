@@ -10,7 +10,7 @@
 	}
 	
 	function addTask(e) {
-		
+
 		if(e.detail.text.trim() == "") return;
 
 		tasks = [
@@ -36,6 +36,7 @@
 <style>
 	main {
 		min-width: 400px;
+		max-width: 540px;
 		padding: 40px;
 		background-color: white;
 		display: grid;
