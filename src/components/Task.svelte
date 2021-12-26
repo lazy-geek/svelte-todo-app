@@ -8,7 +8,7 @@
     }
 </script>
 
-<div class="task" on:click={toggle}>
+<div class="task" on:click={toggle} class:checked={isChecked}>
     <input type="checkbox" name={id} bind:checked={isChecked} aria-label="done"/>
     <label for={id} class="content">{content}</label>
 </div>
@@ -22,6 +22,9 @@
         border-radius: 4px;
         display: flex;
         align-items: center;
+    }
+    .checked {
+        opacity: 0.6;
     }
     .content {
         cursor: pointer;
