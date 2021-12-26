@@ -3,8 +3,11 @@
     export let content = "";
     export let id;
 
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher();
     function toggle() {
         isChecked = !isChecked;
+        dispatch("toggle", { id: id });
     }
 </script>
 

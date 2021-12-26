@@ -11,6 +11,7 @@
                 content={task.content}
                 isChecked={task.isChecked}
                 id={task.id}
+                on:toggle
             />
             <Delete id={task.id} on:delete />
         </div>

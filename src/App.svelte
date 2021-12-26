@@ -15,7 +15,7 @@
 
 		tasks = [
 			...tasks,
-			{ id: uuidv4(), content: e.detail.text, isCheked: false },
+			{ id: uuidv4(), content: e.detail.text, isChecked: false },
 		];
 		localStorage.setItem("tasks", JSON.stringify(tasks));
 	}
@@ -25,11 +25,20 @@
 		});
 		localStorage.setItem("tasks", JSON.stringify(tasks));
 	}
+	function toggleTask(e) {
+		tasks = tasks.map((task) => {
+			if (task.id != e.detail.id) return task;
+			
+			let newtask = {id: task.id,content:task.content,isChecked : !task.isChecked};
+			return newtask;
+		});
+		localStorage.setItem("tasks", JSON.stringify(tasks));
+	}
 </script>
 
 <main>
 	<h1>Todo List</h1>
-	<TaskList {tasks} on:delete={deleteTask} />
+	<TaskList {tasks} on:delete={deleteTask} on:toggle={toggleTask}/>
 	<AddTask on:submit={addTask} />
 </main>
 
