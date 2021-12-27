@@ -4,13 +4,14 @@
     let value = "";
     const dispatch = createEventDispatcher();
 
-    function submit() {
+    function submit(e) {
+        e.preventDefault();
         dispatch("submit", { text: value });
         value = "";
     }
 </script>
 
-<div class="container">
+<form class="container" on:submit={submit}>
     <input
         type="text"
         name="task"
@@ -18,8 +19,8 @@
         placeholder="type something"
         bind:value
     />
-    <button type="submit" id="submit" on:click={submit}>Submit</button>
-</div>
+    <button type="submit" id="submit" >Submit</button>
+</form>
 
 <style>
     .container {
