@@ -31,7 +31,8 @@
         outline: none;
         padding: 7px;
         width: 100%;
-        border: 1px solid grey;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
         background-color: white;
     }
     #submit {

@@ -21,8 +21,8 @@
         cursor: pointer;
         width: 100%;
         padding: 10px;
-        border: 1px solid grey;
-        border-radius: 4px;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
         display: flex;
         align-items: center;
     }
