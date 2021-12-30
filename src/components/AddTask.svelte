@@ -42,7 +42,7 @@
         font-weight: bold;
         color: white;
         background-color: blueviolet;
-        border-radius: 5px;
+        border-radius: 0.25rem;
     }
     #submit:hover {
         background-color: rgb(120, 35, 201);
