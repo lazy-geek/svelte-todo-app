@@ -20,10 +20,11 @@
         padding: 10px 20px;
         margin-left: 5px;
         color: white;
-        background-color: #ff1744;
+        background-color: #fee6e0;
+
         border-radius: 5px;
     }
     .delete:hover {
-        background-color: #e62b50;
+        background-color:  #f3c9be;
     }
 </style>
