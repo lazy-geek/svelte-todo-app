@@ -51,5 +51,6 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		row-gap: 20px;
+		border-radius: 0.25rem;
 	}
 </style>
