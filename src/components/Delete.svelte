@@ -1,7 +1,7 @@
 <script>
     import { createEventDispatcher } from "svelte";
 
-    import trashIcon from "../assets/trash.svg";
+    import trashIcon from "@/assets/trash.svg";
 
     export let id;
     const dispatch = createEventDispatcher();

@@ -1,6 +1,6 @@
 <script>
-    import Task from "./Task.svelte";
-    import Delete from "./Delete.svelte";
+    import Task from "@/components/Task.svelte";
+    import Delete from "@/components/Delete.svelte";
     export let tasks = [];
 </script>
 

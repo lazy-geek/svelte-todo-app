@@ -1,6 +1,6 @@
 <script>
-	import AddTask from "./components/AddTask.svelte";
-	import TaskList from "./components/TaskList.svelte";
+	import AddTask from "@/components/AddTask.svelte";
+	import TaskList from "@/components/TaskList.svelte";
 	import { v4 as uuidv4 } from "uuid";
 
 	let tasks = [];
