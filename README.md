@@ -4,7 +4,7 @@ Simple Todo App Made with Svelte
 
 ## Screenshot
 
-<img src="github-assets\1.png" alt="Todo App"/>
+<img src="github-assets\1.PNG" alt="Todo App"  width="500"/>
 
 ## Live Demo
 
